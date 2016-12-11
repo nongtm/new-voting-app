@@ -87,11 +87,18 @@
 var express = require('express');
 var app = express();
 
+var babel = require("babel-core");
+import { transform } from 'babel-core';
+import * as babel from 'babel-core';
+
+
 var mongodb = require('mongodb');
 
 var MongoClient = mongodb.MongoClient;
 
 var url = "";
+
+require("babel-core").transform("code", options);
 
 MongoClient.connect(url, function(err, db){
     if (err) {
